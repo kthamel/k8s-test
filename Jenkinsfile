@@ -4,7 +4,7 @@ pipeline {
         stage('Check Versions'){
             steps {
                 sh '''
-                    kubectl --version
+                    kubectl version
                 '''
             }
         }
