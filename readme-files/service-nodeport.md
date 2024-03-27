@@ -29,6 +29,9 @@
 [kubectl get services] || <-- Can list the services created in the cluser.
 [kubectl get svc] || <-- Can list the services created in the cluser. 
 [From the above command, will preview the virtual ip address of the service]
-[curl http://192.168.49.2:30008] || <-- Here curl the IP address of the Kubernetes cluster with the specified NodePort
+[curl http://192.168.49.2:30008] || <-- Here curl the IP address of the Kubernetes cluster with the specified NodePort.
 [If have multiple nodes, when the deployment was deployed accross multiple nodes we can access using the IP address with the same NodePort]
 [ie: http://192.168.39.2:30008 || http://192.168.29.2:30008 like wise]
+
+# Describe the service
+[kubectl describe svc nginx-service ] <-- From describing the service, can identify which pods are working as endpoints.

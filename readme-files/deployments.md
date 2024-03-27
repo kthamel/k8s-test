@@ -17,5 +17,7 @@ metadata:
 spec:
 
 # Create the deployment using the definition file or single command if possible
+[kubectl create deployment nginx-test --image=nginx --replicas=2]
+[kubectl create deployment nginx-test --image=nginx --replicas=2 --namespace=develop --dry-run=client -o yaml > deployment.yaml] || <-- Create the defenition file.
 [kubectl create -f test-deployment.yaml]
-[kubectl edit deployment test-deployment] || <-- Can make the changes to the deployment without the definetion file
+[kubectl edit deployment test-deployment] || <-- Can make the changes to the deployment without the definetion file.
