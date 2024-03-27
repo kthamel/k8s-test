@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    env: env-java
+  name: nginx-pod
+  annotations:
+    buildversion: 1.2.3
+spec:
+  containers:
+  - image: nginx
+    name: nginx-pod
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
