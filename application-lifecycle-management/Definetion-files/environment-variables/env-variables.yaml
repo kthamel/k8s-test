@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ubuntu-dev
+  name: ubuntu-dev
+spec:
+  containers:
+  - image: ubuntu:latest
+    name: ubuntu-dev
+    resources: {}
+    env:
+      - name: APP_NAME
+        project: PROJECT
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

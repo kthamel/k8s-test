@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deployment-nginx
+  name: deployment-nginx
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: deployment-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deployment-nginx
+    spec:
+      containers:
+      - image: nginx:stable-alpine3.17-perl
+        name: nginx
+        resources: {}
+status: {}
