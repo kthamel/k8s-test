@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ubuntu-sleeper
+  name: ubuntu-sleeper
+spec:
+  containers:
+  - image: kthamel/ubuntu-sleep
+    name: ubuntu-sleeper
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
