@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: init-container-pod
+  name: init-container-pod
+spec:
+  containers:
+  - image: nginx:latest
+    name: container-pod
+    resources: {}
+  initContainers:
+  - image: busybox:latest
+    name: init-container
+    command: ["sh", "-c", "sleep 30"]
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
