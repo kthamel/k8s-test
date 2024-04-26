@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pod-ubuntu
+  name: pod-ubuntu
+spec:
+  containers:
+  - image: docker.io/kthamel/kdev
+    name: pod-ubuntu
+    securityContext:
+      runAsUser: 1000
+      capabilities:
+        add: ["MAC_ADMIN"]
+    resources: {}
+  imagePullSecrets:
+    - name: regcred
