@@ -3,6 +3,7 @@ kind: PersistentVolume
 metadata:
   name: pv-dev
 spec:
+  persistentVolumeReclaimPolicy: Retain
   accessModes:
     - ReadWriteMany
   capacity:

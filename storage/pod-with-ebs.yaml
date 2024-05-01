@@ -19,7 +19,7 @@ spec:
   volumes:
     - name: vol-dev
       persistentVolumeClaim:
-        claimName: pvc-dev
+        claimName: pvc-ebs-dev
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}

@@ -31,3 +31,12 @@
 
 [Can list the created PVs from below command]
 [kubectl get pv]
+
+# Retain policy
+[When creating the PV, have to define the "retainPolicy"]
+[persistentVolumeReclaimPolicy]
+[
+    retain -- manual reclamation
+    recycle -- basic scrub (rm -rf /thevolume/*)
+    delete -- delete the volume
+]
