@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: nginx-network-policy
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      version: workspace
+  policyTypes:
+    - Ingress
+  ingress:
+  - from: 
+    - podSelector:
+        matchLabels:
+          name: httpd
+    ports:
+    - protocol: TCP
+      port: 80
